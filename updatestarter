@@ -1,0 +1,6 @@
+# When the starter code changes, type the following to get the latest changes
+# source ./updatestarter
+# and that's it. If you mess something up, you can go to https://github.com/psu-ds410/startercode-fall2021 to download the updates
+# manually
+
+git pull staff2 main --allow-unrelated-histories
