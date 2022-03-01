@@ -10,7 +10,7 @@ NUM_REDUCERS = 10
 
 
 #class WordCount(MRJob):  #MRJob version
-class q3(MockMR):  #MockMR version
+class q4(MockMR):  #MockMR version
     global_total = 0
 
     def mapper_init(self):
@@ -86,4 +86,4 @@ class q3(MockMR):  #MockMR version
 
 if __name__ == '__main__':
     #WordCount.run()   # MRJob version
-    q3.run(trace=True) #MockMR version
+    q4.run(trace=True) #MockMR version
