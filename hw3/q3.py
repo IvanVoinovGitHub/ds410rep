@@ -42,13 +42,8 @@ class q3(MockMR):  #MockMR version
     def reducer_init(self):
         self.total_amount = 0
 
-    def reducer(self, key, values):
-        # We want every reducer to know the total number of words
-        # We want the reducers to know this *before* processing key value pairs
-        if key.startswith("Total_"):
-            self.total_num_words = sum(values)
-        else:        
-            yield (key, sum(values) / self.total_num_words)
+    def reducer(self, key, values):   
+        yield (key, sum(values))
 
     def reducer_final(self):
         pass
