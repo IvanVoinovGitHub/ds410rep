@@ -15,7 +15,7 @@ import hashlib
 import csv
 
 #class WordCount(MRJob):  #MRJob version
-class WCStats3(MockMR):  #MockMR version
+class q1(MockMR):  #MockMR version
     def mapper(self, key, line):
         
         parts = list(csv.reader([line]))[0]
@@ -45,4 +45,4 @@ of the file"""
             return 0
 if __name__ == '__main__':
     #WordCount.run()   # MRJob version
-    WCStats3.run(trace=True) #MockMR version
+    q1.run(trace=True) #MockMR version
