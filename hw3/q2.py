@@ -1,4 +1,4 @@
-#Question 1
+
 
 #For each country, how much money was earned from it.
 #output: key value pair (country, amount)
@@ -15,7 +15,7 @@ import hashlib
 import csv
 
 #class WordCount(MRJob):  #MRJob version
-class WCStats3(MockMR):  #MockMR version
+class q2(MockMR):  #MockMR version
     def mapper(self, key, line):
         
         parts = list(csv.reader([line]))[0]
@@ -45,4 +45,4 @@ of the file"""
             return 0
 if __name__ == '__main__':
     #WordCount.run()   # MRJob version
-    WCStats3.run(trace=True) #MockMR version
+    q2.run(trace=True) #MockMR version
